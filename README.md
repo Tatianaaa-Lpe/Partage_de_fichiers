@@ -28,7 +28,7 @@ A la fin nous aurons par exemple: *OU* RH avec un *User1* ajouté au groupe *Grp
 - configure un lecteur réseau pointant vers ce partage via PowerShell
 - ![image](commande_disque_z.png)
 
--Enfin, vérifier que chaque utilisateurs aient bien accès au dossier *Docs*, avec chacun leur restriction
+-Enfin, vérifier que les utilisateurs ont bien accès au dossier *Docs*, avec chacun leur restriction
   
 
 
