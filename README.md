@@ -15,9 +15,20 @@
 - 5: Créés des *Utilisateurs* (Ex: User1, User2, USer3) et en mettre un dans chaque *OU*.
 - 6: Créés des *Groupes* (Ex: Grp_RH, Grp_Comptabilité, Grp_Direction) et ajouter chaque utilisateur à un groupe.
 A la fin nous aurons par exemple: *OU* RH avec un *User1* ajouté au groupe *Grp_RH*
-- 7: Pour lister tous les partages sur le serveur la commande est la suivante: `Get-SmbShare`
+- 7: Gère l'accès de ton dossier *Documents_Entreprise* et retirant l'héritage dans *Security* -> *Advanced* -> *Remove all inheritance ...* et donner l'accès à tous les utilisateurs du domaine en **Lecture seule**. Faire la même chose dans les sous-dossiers (RH, Direction, Comptabilité)
+ > - Sous-dossier RH = Le groupe "RH" et "Direction" ait un accès en lecture/écriture au dossier "RH"
+ > - Sous-dossier Direction = Le groupe "Direction" ait un accès en lecture/écriture à tous les dossiers
+ > - Sous-dossier Comptabilité = Le groupe "Comptabilité" et "Direction" ait un accès en lecture/écriture au dossier "Comptabilité"
+- 8: Pour lister tous les partages sur le serveur la commande est la suivante: `Get-SmbShare`
+
+  ![image](commande_smbshare.png)
 
   ## Sur le client
+
+- configure un lecteur réseau pointant vers ce partage via PowerShell
+- ![image](commande_disque_z.png)
+
+-Enfin, vérifier que chaque utilisateurs aient bien accès au dossier *Docs*, avec chacun leur restriction
   
 
 
